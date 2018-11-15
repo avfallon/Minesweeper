@@ -1,0 +1,52 @@
+
+Look in the following trace I won!!
+
+java TTY
+
+...
+...
+...
+enter guess: 
+F10
+r = 1 c = 0 choice F
+...
+1..
+...
+enter guess: 
+F20
+r = 2 c = 0 choice F
+...
+1..
+0..
+enter guess: 
+F21
+r = 2 c = 1 choice F
+...
+1..
+00.
+enter guess: 
+F11
+r = 1 c = 1 choice F
+...
+12.
+00.
+enter guess: 
+F12
+r = 1 c = 2 choice F
+...
+122
+00.
+enter guess: 
+M01
+r = 0 c = 1 choice M
+.M.
+122
+00.
+enter guess: 
+M02
+r = 0 c = 2 choice M
+.MM
+122
+00.
+yipee!!  you found them all
+
