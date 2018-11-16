@@ -19,7 +19,7 @@ abstract class aView implements View
 
   public void setModel(GameBoard m) {model = m;}
   public void initialDisplay() {update(0, 0);}
-  public void gameOver(String msg) { System.out.println(msg); System.exit(0);}
+  public void gameOver(String msg) {System.out.println(msg); System.exit(0);}
 
   abstract public void update(int r, int c);
 }

@@ -20,7 +20,6 @@ public class GameBoard
   public GameBoard(View v) 
   { 
     view = v; 
-    int cnt = NUMBER_OF_MINES;
   
     ...
   
@@ -31,7 +30,4 @@ public class GameBoard
     // cheat();  // for testing ... and amazing your friends!
   }
 
-
 }
-
-
