@@ -4,7 +4,18 @@
 
 public class GameBoard
 {
-
+    private Block[][] grid;
+    private View view;
+    
+    public GameBoard(View v)
+    {
+        
+    }
+    
+    public void guessBlockIsSafe(int r, int c)
+    {
+        grid[r][c].guessSafe();
+    }
   protected void cheat()
   {
     for(int r=0; r<BOARD_SIZE; r++)        
