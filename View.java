@@ -27,16 +27,18 @@ abstract class aView implements View
 
 class TTYView extends aView
 {
-  public void update(int _r, int _c)   // tty version ignores _r and _c
-  {
-    for(int r = 0; r < GameBoard.BOARD_SIZE; r++)
+    
+    
+    public void update(int _r, int _c)   // tty version ignores _r and _c
     {
-      String S = "";
-      for(int c = 0; c < GameBoard.BOARD_SIZE; c++)
-        S += model.displayAs(r, c);
-      System.out.println(S);
+      for(int r = 0; r < GameBoard.BOARD_SIZE; r++)
+      {
+        String S = "";
+        for(int c = 0; c < GameBoard.BOARD_SIZE; c++)
+          S += model.displayAs(r, c);
+        System.out.println(S);
+      }
     }
-  }
 }
 
 

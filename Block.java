@@ -17,6 +17,8 @@ abstract class Block
     }
     
     protected abstract void guessSafe();
+    protected abstract void tellNeighborsAboutMine(GameBoard gb, int r, int c);
+    protected abstract void incrementMineCount();
 }
 
 
@@ -32,6 +34,8 @@ class MineBlock extends Block   // [ no instance variables ]
     {
         gb.incrementCountForSurroundingBlocks(r, c);
     }
+    
+    public void incrementMineCount() {}
     
     public boolean correctlyGuessed()
     {
@@ -65,10 +69,12 @@ class NumberBlock extends Block
         markedAsMine = false;
     }
     
-    public void IncrementMineCount()
+    public void incrementMineCount()
     {
         adjacentMineCount++;
     }
+    
+    public void tellNeighborsAboutMine(GameBoard gb, int r, int c){}
     
     public boolean CorrectlyGuessed()
     {
