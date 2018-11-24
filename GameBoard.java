@@ -65,40 +65,27 @@ public class GameBoard
     public void incrementCountForSurroundingBlocks(int r, int c)
     {
         for(int i=r-1; r<=r+1; r++)        
-        {
             for(int j=c-1; c<=c+1; c++)
-            {
                 if(i>=0 && i<= BOARD_SIZE && j>=0 && j<= BOARD_SIZE)
-                {
                     grid[i][j].incrementMineCount();
-                }
-            }
-        }
     }
     
-  protected void cheat()
-  {
-    for(int r=0; r<BOARD_SIZE; r++)        
+    public void markBlockAsMine(int r, int c)
     {
-      String S = "";
-      for(int c=0; c<BOARD_SIZE; c++)
-        S += grid[r][c].cheat();
-      System.out.println(S);
+        grid[r][c].markAsMine();
     }
-  }
-
-
-  public GameBoard(View v) 
-  { 
-    view = v; 
-  
-    ...
-  
-    for(int r=0; r<BOARD_SIZE; r++)        // fill in mine counters
-      for(int c=0; c<BOARD_SIZE; c++)
-        grid[r][c].tellNeighborsAboutMine(this, r, c);
-
-    // cheat();  // for testing ... and amazing your friends!
-  }
-
+    
+    public boolean minesAllFound()
+    {
+        for(int r=0; r<BOARD_SIZE; r++)        
+            for(int c=0; c<BOARD_SIZE; c++)
+                if(!grid[r][c].correctlyGuessed())
+                    return false;
+        return true;
+    }
+    
+    public String displayAs(int r, int c)
+    {
+        return grid[r][c].displayAs();
+    }
 }

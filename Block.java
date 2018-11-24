@@ -16,9 +16,11 @@ abstract class Block
         markedAsMine = true;
     }
     
+    protected abstract boolean correctlyGuessed();
     protected abstract void guessSafe();
     protected abstract void tellNeighborsAboutMine(GameBoard gb, int r, int c);
     protected abstract void incrementMineCount();
+    protected abstract String displayAs();
 }
 
 
@@ -76,7 +78,7 @@ class NumberBlock extends Block
     
     public void tellNeighborsAboutMine(GameBoard gb, int r, int c){}
     
-    public boolean CorrectlyGuessed()
+    public boolean correctlyGuessed()
     {
         return !markedAsMine;
     }
