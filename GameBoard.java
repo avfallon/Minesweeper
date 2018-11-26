@@ -8,11 +8,12 @@ public class GameBoard
 {
     private Block[][] grid;
     private View view;
-    public static final int BOARD_SIZE = 5;
-    public static final int NUMBER_OF_MINES = 5;
+    public static final int BOARD_SIZE = 3;
+    public static final int NUMBER_OF_MINES = 3;
     
     public GameBoard(View v)
     {
+        grid = new Block[BOARD_SIZE][BOARD_SIZE];
         view = v;
         int minesLeftToAdd = NUMBER_OF_MINES;
         for(int r=0;r<BOARD_SIZE;r++)

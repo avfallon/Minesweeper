@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 // mineSweeper.java (TTY main)
 // Copyright Dave Binkley 2018
 
@@ -36,6 +38,7 @@ public class TTY
         b.markBlockAsMine(r,c);
       else
         b.guessBlockIsSafe(r,c);
+      v.update(r, c);
     } while (!b.minesAllFound());
   
     System.out.println("yipee!!  you found them all");
