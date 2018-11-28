@@ -1,6 +1,11 @@
 // mineSweeper.java (class Block (part of the MVC model))
 // Copyright Dave Binkley 2018
-
+/**
+ * This is (kind of)my code! Its goal is to hold a game board of Block objects and alter those Blocks
+ * CS 312 - Assignment 8
+ * @author Andrew Fallon (inspired by the analysis and design of Dave Binkley)
+ * @version 1.0 11/23/18
+ */
 
 abstract class Block
 {

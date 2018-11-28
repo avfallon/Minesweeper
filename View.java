@@ -1,3 +1,9 @@
+/**
+ * This is Binkley's code! Its goal is to print out the text based Minesweeper game board
+ * CS 312 - Assignment 8
+ * @author Dave Binkley
+ * @version 1.0 accessed 11/21/18
+ */
 // mineSweeper.java (class TTYView (an MVC view))
 // Copyright Dave Binkley 2018
 
@@ -24,7 +30,6 @@ abstract class aView implements View
   abstract public void update(int r, int c);
 }
 
-
 class TTYView extends aView
 {
     public void update(int _r, int _c)   // tty version ignores _r and _c
@@ -38,5 +43,4 @@ class TTYView extends aView
         }
     }
 }
-
 

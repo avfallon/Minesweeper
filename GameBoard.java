@@ -1,13 +1,17 @@
-import java.util.Random;
-
+/**
+ * This is my code! Its goal is to hold a game board of Block objects and alter those Blocks
+ * CS 312 - Assignment 8
+ * @author Andrew Fallon (inspired by the analysis and design of Dave Binkley)
+ * @version 1.0 11/23/18
+ */
 // mineSweeper.java (class GameBoard (part of the MVC model))
 // Copyright Dave Binkley 2018
-
+import java.util.Random;
 
 public class GameBoard
 {
-    private Block[][] grid;
-    private View view;
+    protected Block[][] grid;
+    protected View view;
     public static final int BOARD_SIZE = 5;
     public static final int NUMBER_OF_MINES = 3;
     
