@@ -1,4 +1,3 @@
-import java.util.Scanner;
 /**
  * This is Binkley's code! Its goal is to run the Minesweeper game using user input
  * CS 312 - Assignment 8
@@ -7,7 +6,7 @@ import java.util.Scanner;
  */
 // mineSweeper.java (TTY main)
 // Copyright Dave Binkley 2018
-
+import java.util.Scanner;
 
 public class TTY
 {
