@@ -47,7 +47,7 @@ class MineBlock extends Block   // [ no instance variables ]
     public String displayAs()
     {
         if(markedAsMine)
-            return "M";
+            return "M ";
         else
             return ". ";
     }
@@ -62,7 +62,7 @@ class NumberBlock extends Block
     public NumberBlock()
     {
         adjacentMineCount = 0;
-        exposed = false;
+        exposed = true;
     }
     
     public void guessSafe()

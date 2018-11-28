@@ -8,7 +8,7 @@ public class GameBoard
 {
     private Block[][] grid;
     private View view;
-    public static final int BOARD_SIZE = 3;
+    public static final int BOARD_SIZE = 5;
     public static final int NUMBER_OF_MINES = 3;
     
     public GameBoard(View v)
@@ -45,8 +45,8 @@ public class GameBoard
                 if(mineCount>0)
                 {
                     Block temp = grid[r][c];
-                    int _r = rand.nextInt(5);
-                    int _c = rand.nextInt(5);
+                    int _r = rand.nextInt(BOARD_SIZE);
+                    int _c = rand.nextInt(BOARD_SIZE);
                     grid[r][c] = grid[_r][_c];
                     grid[_r][_c] = temp;
                 }
@@ -65,10 +65,16 @@ public class GameBoard
     
     public void incrementCountForSurroundingBlocks(int r, int c)
     {
-        for(int i=r-1; r<=r+1; r++)        
-            for(int j=c-1; c<=c+1; c++)
-                if(i>=0 && i<= BOARD_SIZE && j>=0 && j<= BOARD_SIZE)
+        for(int i=r-1; i<=r+1; i++)        
+        {
+            for(int j=c-1; j<=c+1; j++)
+            {
+                if(i>=0 && i< BOARD_SIZE && j>=0 && j< BOARD_SIZE)
+                {
                     grid[i][j].incrementMineCount();
+                }
+            }
+        }
     }
     
     public void markBlockAsMine(int r, int c)
