@@ -62,7 +62,7 @@ class NumberBlock extends Block
     public NumberBlock()
     {
         adjacentMineCount = 0;
-        exposed = true;
+        exposed = false;
     }
     
     public void guessSafe()

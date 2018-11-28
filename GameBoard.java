@@ -69,12 +69,17 @@ public class GameBoard
         {
             for(int j=c-1; j<=c+1; j++)
             {
-                if(i>=0 && i< BOARD_SIZE && j>=0 && j< BOARD_SIZE)
+                if(onBoard(i, j))
                 {
                     grid[i][j].incrementMineCount();
                 }
             }
         }
+    }
+    
+    protected boolean onBoard(int r, int c)
+    {
+        return (r>=0 && r<BOARD_SIZE && c>=0 && c<BOARD_SIZE);
     }
     
     public void markBlockAsMine(int r, int c)
