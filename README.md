@@ -1,5 +1,5 @@
 # Minesweeper
 
-Game created for a school project with separate model, view, and controller.
+Minesweeper game written with java MVC
 
 Usage: call TTY.java
